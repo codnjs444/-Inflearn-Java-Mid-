@@ -6,4 +6,5 @@ public class UserV1 {
     public UserV1(String id) {
         this.id = id;
     }
+
 }
