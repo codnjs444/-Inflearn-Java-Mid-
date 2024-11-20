@@ -8,7 +8,6 @@ public class RefMain1_3 {
         System.out.println("a = " + a);
         System.out.println("b = " + b);
 
-        change();
         System.out.println("부산 -> b");
         System.out.println("a = " + a);
         System.out.println("b = " + b);
