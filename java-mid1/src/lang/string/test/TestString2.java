@@ -8,6 +8,6 @@ public class TestString2 {
             System.out.println(s + ":" + s.length());
             sum += s.length();
         }
-
+        System.out.println("sum = " + sum);
     }
 }
