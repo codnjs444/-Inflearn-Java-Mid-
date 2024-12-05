@@ -32,9 +32,6 @@ public class MainV4 {
 
         if (e instanceof SendExceptionV4 sendExceptionV4) {
             System.out.println("[전송 오류] 전송 데이터: " + sendExceptionV4.getSendData());
-        } else if (e instanceof ConnectExceptionV4 connectExceptionV4) {
-            System.out.println("[연결 오류] 전송 데이터: " + connectExceptionV4.getAddress());
         }
-
     }
 }
