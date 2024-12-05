@@ -1,5 +1,8 @@
 package exception.ex4;
 
+import exception.ex4.exception.ConnectExceptionV4;
+import exception.ex4.exception.SendExceptionV4;
+
 import java.util.Scanner;
 
 public class MainV4 {
@@ -13,15 +16,25 @@ public class MainV4 {
             if (input.equals("exit")) {
                 break;
             }
-
             try {
                 networkService.sendMessage(input);
             } catch (Exception e) {
-
+                exceptionHandler(e);
             }
-            networkService.sendMessage(input);
-            System.out.println();
         }
         System.out.println("프로그램을 정상 종료 합니다.");
+    }
+
+    private static void exceptionHandler(Exception e) {
+        System.out.println("사용자 메시지: 죄송합니다. 알 수 없는 문제가 발생합니다.");
+        System.out.println("==개발자용 디버깅 메시지==");
+        e.printStackTrace(System.out);
+
+        if (e instanceof SendExceptionV4 sendExceptionV4) {
+            System.out.println("[전송 오류] 전송 데이터: " + sendExceptionV4.getSendData());
+        } else if (e instanceof ConnectExceptionV4 connectExceptionV4) {
+            System.out.println("[연결 오류] 전송 데이터: " + connectExceptionV4.getAddress());
+        }
+
     }
 }
