@@ -44,7 +44,7 @@ public class MyLinkedListV2 {
         return oldValue;
     }
 
-    public Object reomve(int index) {
+    public Object remove(int index) {
         Node removeNode = getNode(index);
         Object removedItem = removeNode.item;
         if (index == 0) {
@@ -54,7 +54,7 @@ public class MyLinkedListV2 {
             prev.next = removeNode.next;
         }
         removeNode.item = null;
-        removedItem.next = null;
+        removeNode.next = null;
         size--;
         return removedItem;
     }
@@ -64,11 +64,12 @@ public class MyLinkedListV2 {
         return node.item;
     }
 
-    private Node getNode(int index) {
+    public Node getNode(int index) {
         Node x = first;
         for (int i = 0; i < index; i++) {
             x = x.next;
         }
+        System.out.println("getNode(x)" + x);
         return x;
     }
 

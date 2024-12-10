@@ -10,6 +10,8 @@ public class MyLinkedListV1 {
             first = newNode;
         } else {
             Node lastNode = getLastNode();
+            System.out.println("First = " + first);
+            System.out.println("lastNode = " + lastNode);
             lastNode.next = newNode;
         }
         size++;
