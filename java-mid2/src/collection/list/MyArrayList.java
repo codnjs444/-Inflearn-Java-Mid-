@@ -34,7 +34,6 @@ public class MyArrayList<E> implements MyList<E> {
         if (size == elementData.length) {
             grow();
         }
-
         shiftRightFrom(index);
         elementData[index] = e;
         size++;

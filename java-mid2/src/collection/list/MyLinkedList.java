@@ -34,7 +34,6 @@ public class MyLinkedList<E> implements MyList<E> {
             Node<E> prev = getNode(index - 1);
             newNode.next = prev.next;
             prev.next = newNode;
-            System.out.println("newNode.next" + newNode.next);
         }
         size++;
     }
@@ -74,7 +73,6 @@ public class MyLinkedList<E> implements MyList<E> {
         for (int i = 0; i < index; i++) {
             x = x.next;
         }
-        System.out.println("getNode(x)" + x);
         return x;
     }
 
