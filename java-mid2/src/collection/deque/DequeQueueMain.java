@@ -11,6 +11,6 @@ public class DequeQueueMain {
         deque.offer(2);
         deque.offer(3);
         System.out.println("deque = " + deque);
-        
+
     }
 }
