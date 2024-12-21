@@ -13,8 +13,7 @@ public class MyArrayIterator implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        boolean result = currentIndex < targetArr.length - 1;
-        return false;
+        return currentIndex < targetArr.length - 1;
     }
 
     @Override
